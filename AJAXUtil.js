@@ -51,7 +51,7 @@ function AJAXUtil(obj) {
 		xmlhttp = new XMLHttpRequest();
 	} else {
 		// IE6, IE5 浏览器执行代码
-		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		xmlhttp = new ActiveXObject("Microsoft.xmlhttp");
 	}
 
 	//监听状态
@@ -73,7 +73,7 @@ function AJAXUtil(obj) {
 	
 	//判断发送方式
 	if(obj.method.toLowerCase() === "post") {
-		xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+		xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
 		xmlhttp.open(obj.method, obj.url, obj.async);
 		xmlhttp.send(postData);
 	} else if(obj.method.toLowerCase() === "get") {
